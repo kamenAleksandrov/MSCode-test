@@ -1,0 +1,67 @@
+html {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+}
+  
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #242c42ed, #3d2e50);
+    overflow: hidden; /* Ensures no scrollbar appears */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -1; /* Ensures the gradient is in the background */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+    z-index: 1; /* Ensures the form is above the gradient background */
+    /* Additional styles */
+}
+
+/* Rest of your CSS */
+
+
+.login-form input[type="text"], .login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.login-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #5a7bd5;
+}
+
+/* Add any other styles as needed */

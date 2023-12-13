@@ -1,0 +1,131 @@
+html {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #242c42ed, #3d2e50);
+  width: auto;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+h1 {
+  color: rgb(212, 29, 29);
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+/* Style for the main content area */
+.main-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px; /* Adjust as needed */
+  width: 100%;
+  margin: 20px; /* Provides some space around the content */
+}
+
+.headingDiv {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(221, 133, 17);
+  margin: 0%;
+  padding: 0%;
+  background-image: url('max-kuznetsov-blog-banner-fixed.jpg');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.myDiv1 {
+  width: 100%;
+  height: 100vh;
+  background-color: lightblue;
+  margin: 0%;
+  padding: 0%;
+}
+
+.myDiv2 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(19, 85, 107);
+  margin: 0%;
+  padding: 0%;
+}
+
+.chart-container {
+  width: 100%;
+  height: 33.33%; /* This will make each chart take up one third of the screen height */
+  display: flex; /* This will make the contents of the container (the canvas) a flex item */
+  justify-content: center; /* This will center the canvas horizontally */
+  align-items: center; /* This will center the canvas vertically */
+}
+
+.chart-container canvas {
+  height: 100% !important; /* This will make the chart take up the full height of its container */
+}
+
+.button, .link {
+  background-color: #6e8efb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover, .link:hover {
+  background-color: #5a7bd5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
