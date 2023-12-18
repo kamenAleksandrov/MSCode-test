@@ -50,46 +50,15 @@ p {
   margin: 20px; /* Provides some space around the content */
 }
 
-.headingDiv {
+.section {
   width: 100%;
   height: 100vh;
-  background-color: rgb(221, 133, 17);
   margin: 0%;
   padding: 0%;
-  background-image: url('max-kuznetsov-blog-banner-fixed.jpg');
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the image within the container */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  position: relative;
 }
 
-.myDiv1 {
-  width: 100%;
-  height: 100vh;
-  background-color: lightblue;
-  margin: 0%;
-  padding: 0%;
-}
-
-.myDiv2 {
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(19, 85, 107);
-  margin: 0%;
-  padding: 0%;
-}
-
-.chart-container {
-  width: 100%;
-  height: 33.33%; /* This will make each chart take up one third of the screen height */
-  display: flex; /* This will make the contents of the container (the canvas) a flex item */
-  justify-content: center; /* This will center the canvas horizontally */
-  align-items: center; /* This will center the canvas vertically */
-}
-
-.chart-container canvas {
-  height: 100% !important; /* This will make the chart take up the full height of its container */
-}
-
+/* navigation menu and login button */
 .button, .link {
   background-color: #6e8efb;
   color: white;
@@ -128,4 +97,126 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
+}
+
+/* sections design */
+/* space section */
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center-text h1 {
+  font-size: 3em;
+  color: #fff;
+}
+
+.center-text p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#bubbles {
+  position: absolute;
+  width: 100%;
+  height: 105%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateZ(100px) scale(5);
+  transform: translateY(1%);
+  transform: translateX(1%);
+  animation: bubbleEntrance 4s ease-out forwards;
+}
+
+@keyframes bubbleEntrance {
+  0% {opacity: 0; transform: translateY(50%);}
+  100% {opacity: 1; transform: translateY(100%);}
+}
+
+.cloud1 {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 10%;
+  background: #fff;
+  --mask:
+    radial-gradient(67.08px at 50% 90.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index: 4;
+}
+
+.cloud2 {
+  position: absolute;
+  bottom: 3%;
+  width: 200%;
+  height: 10%;
+  background: #cfe2f1;
+  --mask:
+    radial-gradient(67.08px at 50% 90.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index: 3;
+  transform: translateX(-7%);
+}
+.cloud3 {
+  position: absolute;
+  bottom: 5%;
+  width: 200%;
+  height: 10%;
+  background: #b1c6d6;
+  --mask:
+    radial-gradient(67.08px at 50% 90.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index: 2;
+  transform: translateX(-18%);
+}
+.cloud4 {
+  position: absolute;
+  bottom: 7%;
+  width: 200%;
+  height: 10%;
+  background: #718b9e;
+  --mask:
+    radial-gradient(67.08px at 50% 90.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index: 1;
+  transform: translateX(-13%);
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* sky section */
+
+.sky {
+  background-color: #4877fa;
 }

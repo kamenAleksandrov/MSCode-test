@@ -65,3 +65,11 @@ body::before {
 }
 
 /* Add any other styles as needed */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.animate {
+    animation: fadeIn 1s ease-in-out;
+}

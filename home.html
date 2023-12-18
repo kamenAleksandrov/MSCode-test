@@ -20,99 +20,27 @@
     <button onclick="location.href='login.html'">Login</button>
 </nav>
 
-<div class="headingDiv">
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-</div>
+<section class="section space">
+    <div class="center-text">
+        <h1>Coin Sage</h1>
+        <p>the tool to take you to the stars</p>
+      </div>
+    <div id="bubbles"></div>
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+    <div class="cloud4"></div>
+</section>
 
-<div class="myDiv1">
-    <h1>Div1 Buttons test</h1>
-    <div>
-        <button id="myButton" onclick="showAlert()">Click me</button>
-        <button onclick="addParagraph()">Add Paragraph</button>
-        <div id="paragraph-container">
-            <!-- Paragraphs will be added here dynamically -->
-        </div>
-    </div>
-</div>
+<section class="section sky">
+</section>
 
-<!-- New div added below myDiv1 -->
-<div class="myDiv2">
-    <div class="chart-container">
-        <canvas id="myChart1"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="myChart2"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="myChart3"></canvas>
-    </div>
-</div>
+<section class="section mountains">
+</section>
 
-<div class="myDiv3">
-    <h1>Div2 Chart test</h1>
-    <div>
-        <span>span</span>
-        <canvas id="myChart"></canvas>
-    </div>
-</div>
+<section class="section sea">
+</section>
 
-<script src="js.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    // Get the canvas element
-    var ctx = document.getElementById('myChart').getContext('2d');
-
-    // Define the data for the chart
-    var data = {
-        labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],
-        datasets: [{
-            label: 'Sample Data',
-            data: [10, 20, 15, 25],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-        }]
-    };
-
-    // Create the chart
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: data
-    });
-
-    // Get the canvas elements
-var ctx1 = document.getElementById('myChart1').getContext('2d');
-var ctx2 = document.getElementById('myChart2').getContext('2d');
-var ctx3 = document.getElementById('myChart3').getContext('2d');
-
-// Define the data for the charts
-var data = {
-    labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],
-    datasets: [{
-        label: 'Sample Data',
-        data: [10, 20, 15, 25],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-    }]
-};
-
-// Create the charts
-var myChart1 = new Chart(ctx1, {
-    type: 'bar',
-    data: data
-});
-
-var myChart2 = new Chart(ctx2, {
-    type: 'bar',
-    data: data
-});
-
-var myChart3 = new Chart(ctx3, {
-    type: 'bar',
-    data: data
-});
-</script>
+<script src="homeJS.js"></script>
 </body>
 </html>
